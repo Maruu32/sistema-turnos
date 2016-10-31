@@ -92,7 +92,11 @@ body {
 background:transparent;
 }
 .what-we-do-box {
+<<<<<<< HEAD
 	margin-top: 300px;
+=======
+	margin-top: 180px;
+>>>>>>> 09fa0cbb645e2337055e3dfa6e8fe974e23424e6
 }
 
 .what-we-do-box h3 {
