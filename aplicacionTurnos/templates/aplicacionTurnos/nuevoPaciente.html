@@ -1,0 +1,37 @@
+{% extends 'aplicacionTurnos/baseABM.html' %}
+
+
+    {% block ABM %}
+        <h2>Paciente</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit" name="guardar" class="save btn btn-default">Guardar</button>
+        </form>
+    {% endblock%}
+    {% block tablas %}
+        <table class="table table-hover">
+          <font size=5><p align=center>Pacientes</p></font>
+            <tr>
+                <td class="warning">Nombre</td>
+                <td class="warning">Apellido</td>
+                <td class="warning">Dni</td>
+                <td class="warning">Telefono</td>
+                <td class="warning">Fecha Nacimiento</td>
+                <td class="warning">Obra Social</td>
+                <td class="warning">Numero Obra Social</td>
+            </tr>
+            {% for paciente in pacientes %}
+                </tr>
+                    <td class="success">{{paciente.nombre}}</td>
+                    <td class="success">{{paciente.apellido}}</td>
+                    <td class="success">{{paciente.dni}}</td>
+                    <td class="success">{{paciente.telefono}}</td>
+                    <td class="success">{{paciente.fechaNacimiento}}</td>
+                    <td class="success">{{paciente.obraSocial}}</td>
+                    <td class="success">{{paciente.numeroObraSocial}}</td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.editarPaciente' pk=paciente.pk %}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.eliminarPaciente' pk=paciente.pk %}"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+                </tr>
+            {% endfor %}
+          </table>
+    {% endblock %}

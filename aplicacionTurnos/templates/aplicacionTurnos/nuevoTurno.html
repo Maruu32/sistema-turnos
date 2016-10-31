@@ -1,0 +1,32 @@
+{% extends 'aplicacionTurnos/baseABM.html' %}
+
+    {% block ABM %}
+        <h2>Turno</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit" name="guardar" class="save btn btn-default">Guardar</button>
+        </form>
+    {% endblock%}
+    {% block tablas %}
+        <table class="table table-hover">
+          <font size=5><p align=center>Turnos</p></font>
+            <tr>
+                <td class="warning">Medico</td>
+                <td class="warning">Paciente</td>
+                <td class="warning">Horario</td>
+                <td class="warning">Tratamiento</td>
+                <td class="warning">estado</td>
+            </tr>
+            {% for turno in turnos %}
+                <tr>
+                    <td class="success">{{turno.medico}}</td>
+                    <td class="success">{{turno.paciente}}</td>
+                    <td class="success">{{turno.horario}}</td>
+                    <td class="success">{{turno.tratamiento}}</td>
+                    <td class="success">{{turno.estado}}
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.editarTurno' pk=turno.pk %}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.eliminarTurno' pk=turno.pk %}"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+                </tr>
+            {% endfor %}
+          </table>
+    {% endblock %}
