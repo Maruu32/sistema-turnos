@@ -40,6 +40,7 @@
 #contenedorPrincipal{
     width: 100%;
     height: 60%;
+    margin-top: 20px;
 }
 #contenedorSecundario{
     width:100%;
@@ -79,46 +80,49 @@
     margin: 0 auto;
     font-size: 11px;
 }
+
 h2 {
-    font-size:20px;
+  font: normal 20px Cookie, Arial, Helvetica, sans-serif;
 }
 
 body {
   background-color: #e6e6e6;
 }
-
+p {
+  font: normal 35px Itim, Arial, Helvetica, sans-serif;
+}
+table{
+  font: normal 20px Itim, Arial, Helvetica, sans-serif;
+  }
 .boton-trans
 {
 background:transparent;
 }
 .what-we-do-box {
-<<<<<<< HEAD
 	margin-top: 300px;
-=======
-	margin-top: 180px;
->>>>>>> 09fa0cbb645e2337055e3dfa6e8fe974e23424e6
 }
 
 .what-we-do-box h3 {
+  font: normal 35px Cookie, Arial, Helvetica, sans-serif;
 	padding: 15px 0;
   text-align: center;
   color: black;
 }
 
 .what-we-do-box p {
-  font-size: 18px;
+  font-size: 20px;
   color: #aaa;
   line-height: 25px;
   text-align: center;
 }
 
 .what-we-do-box .what-we-do-box-icon {
-  width: 120px;
-	height: 120px;
+  width: 110px;
+	height: 110px;
   margin: 0 auto;
-	padding-top: 30px;
-	background: #8ec1cd;
-	-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px;
+	padding-top: 23px;
+	background: #292c2f;
+	-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 45px;
   font-size: 50px;
   color: #fff;
   line-height: 20px;
@@ -126,3 +130,15 @@ background:transparent;
 }
 
 .what-we-do-box .what-we-do-box-icon i, .what-we-do-box .what-we-do-box-icon span { vertical-align: middle; }
+
+
+/* Redefine los estilos de .btn */
+/* Modificar el texto y el color de fondo en los tres estados
+   principales del botón: default, hover y active. */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: #2E64FE;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: transparent;;
+}

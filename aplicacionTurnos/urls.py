@@ -5,7 +5,7 @@ from views import LoginView
 urlpatterns = [
     url(r'^login$', LoginView.as_view()),
     url(r'^logout$', views.logout_view) ,
-   url(r'^login$', LoginView.as_view()),
+    url(r'^login$', LoginView.as_view()),
     url(r'^$', views.home),
     url(r"^cambioDia/(?P<dia>\S+)$", views.cambioDia),
     url(r'^nuevoPaciente$', views.nuevoPaciente),

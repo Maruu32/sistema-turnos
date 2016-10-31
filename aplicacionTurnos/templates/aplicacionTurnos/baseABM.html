@@ -2,11 +2,15 @@
 <html>
 <head>
   <meta charset='utf-8'/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!---Bootstrap and custom styles--->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/footer.css"/>
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/header-user-dropdown.css">
+  <link href='http://fonts.googleapis.com/css?family=Cookie|Itim' rel='stylesheet' type='text/css'>
   <!---Estilos Calendario--->
   <link href='../static/css/fullcalendar.css' rel='stylesheet'/>
   <link href='../static/css/fullcalendar.print.css' rel='stylesheet' media='print'/>
@@ -21,6 +25,21 @@
 </head>
 
   <body>
+    <header class="header-user-dropdown">
+
+      <div class="header-limiter">
+        <h1>Dental<span>Clinic</span></h1>
+
+        <div class="header-user-menu">
+          <img src="/static/imagenes/Doctor.png" alt="User Image"/>
+
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="/logout" class="highlight">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <div id='general'>
       <div id='contenedorPrincipal'>
         <div id='contenedorPrimarioIzquierda'>
@@ -36,7 +55,7 @@
       <!--Boton Para Home-->
        <div class="col-sm-2 what-we-do-box">
          <div class="what-we-do-box-icon">
-           <a class="btn" href="{%url 'aplicacionTurnos.views.home'%}">
+           <a class="btn btn-ttc" href="{%url 'aplicacionTurnos.views.home'%}">
              <i class="fa fa-home fa-4x"></i></a></div>
             <h3>Inicio</h3>
             <p>Pagina de Inicio</p>
@@ -44,33 +63,31 @@
       <!--Boton Para Nuevo Medico y Tabla de Medicos-->
        <div class="col-sm-2 what-we-do-box">
          <div class="what-we-do-box-icon">
-           <a class="btn" href="{%url 'aplicacionTurnos.views.nuevoMedico'%}">
+           <a class="btn btn-ttc" href="{%url 'aplicacionTurnos.views.nuevoMedico'%}">
              <i class="fa fa-user-md fa-4x"></i></a></div>
             <h3>Medico</h3>
-            <p>Crear Nuevo Medico</p>
-            <p>y ver los medicos registrados</p>
+            <p>Crear y administrar Medicos</p>
          </div>
          <!--Boton para Nuevo Paciente y Tabla de Pacientes-->
          <div class="col-sm-2 what-we-do-box">
          <div class="what-we-do-box-icon">
-           <a class="btn" href="{% url 'aplicacionTurnos.views.nuevoPaciente' %}">
+           <a class="btn btn-ttc" href="{% url 'aplicacionTurnos.views.nuevoPaciente' %}">
              <i class="fa fa-user fa-4x"></i></a></div>
              <h3>Paciente</h3>
-             <p>Crear nuevos pacientes</p>
-             <p>y ver los ya ingresados</p>
+             <p>Crear y administrar pacientes</p>
          </div>
          <!--Boton para nuevo turno-->
          <div class="col-sm-2 what-we-do-box">
          <div class="what-we-do-box-icon">
-           <a class="btn" href="{%url 'aplicacionTurnos.views.nuevoTurno'%}">
+           <a class="btn btn-ttc" href="{%url 'aplicacionTurnos.views.nuevoTurno'%}">
              <i class="fa fa-plus-square fa-4x"></i></a></div>
              <h3>Nuevo Turno</h3>
-             <p>Crear Nuevos Turnos</p>
+             <p>Crear y Administrar Turnos</p>
          </div>
          <!--Boton para Auxiliares-->
          <div class="col-sm-2 what-we-do-box">
          <div class="what-we-do-box-icon">
-           <div class="btn-group ">
+           <div class="btn-group btn-ttc ">
              <button type="button" class="btn dropup-toggle boton-trans" data-toggle="dropdown">
                <i class="fa fa-list-alt fa-4x"></i></a>
                <span class="caret"></span>
@@ -83,10 +100,9 @@
            </div>
          </div>
          <h3>Auxiliares</h3>
-         <p>Agregar obra social,</p>
+         <p>Administrar obra social,</p>
          <p>tratamientos y especializaciones</p>
        </div>
-    </div>
-  </div>
+     </div>
   </body>
 </html>

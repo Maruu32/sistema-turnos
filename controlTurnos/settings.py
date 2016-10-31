@@ -38,10 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aplicacionTurnos',
-<<<<<<< HEAD
     'widget_tweaks',
-=======
->>>>>>> 09fa0cbb645e2337055e3dfa6e8fe974e23424e6
 )
 
 MIDDLEWARE_CLASSES = (
