@@ -1,0 +1,37 @@
+{% extends 'aplicacionTurnos/baseABM.html' %}
+{% load widget_tweaks %}
+{% load bootstrap %}
+
+        {% block ABM %}
+            <h2>Tratamiento</h2>
+            <form method="POST">
+              {% csrf_token %}
+              {% form_input form.nombre %}
+              {% form_input form.duracion %}
+              {% form_input form.precio %}
+              <div class="pull-right">
+                <input type="submit" class="btn btn-success" value="Guardar"/>
+              </div>
+            </form>
+            {% endblock%}
+
+    {% block tablas %}
+        <table class="table table-hover">
+          <font size=5><p align=center>Tratamientos</p></font>
+            <tr>
+                <td class="warning">Tratamiento</td>
+                <td class="warning">Duracion</td>
+                <td class="warning">Precio</td>
+            </tr>
+            {% for tratamiento in tratamientos %}
+                </tr>
+                    <td class="success">{{tratamiento.nombre}}</td>
+                    <td class="success">{{tratamiento.duracion}}</td>
+                    <td class="success">{{tratamiento.precio}}</td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.editarTratamiento' pk=tratamiento.pk %}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.editarTratamiento' pk=tratamiento.pk %}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                    <td class="success"><a href="{% url 'aplicacionTurnos.views.eliminarTratamiento' pk=tratamiento.pk %}"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+                </tr>
+            {% endfor %}
+          </table>
+    {% endblock %}

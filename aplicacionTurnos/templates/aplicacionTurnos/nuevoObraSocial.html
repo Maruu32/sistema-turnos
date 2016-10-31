@@ -1,0 +1,29 @@
+{% extends 'aplicacionTurnos/baseABM.html' %}
+{% load widget_tweaks %}
+{% load bootstrap %}
+
+        {% block ABM %}
+            <h2>Obra Social</h2>
+            <form method="POST">
+              {% csrf_token %}
+              {% form_input form.nombre %}
+              <div class="pull-right">
+                <input type="submit" class="btn btn-success" value="Guardar"/>
+              </div>
+            </form>
+            {% endblock%}
+
+    {% block tablas %}
+        <table class="table table-hover">
+        <tr>
+          <td class="warning" align=center><font size=5>Obra Social</font></td>
+        </tr>
+        {% for obraSocial in obrasSociales %}
+            </tr>
+                <td class="success">{{obraSocial.nombre}}</td>
+                <td class="success"><a href="{% url 'aplicacionTurnos.views.editarObraSocial' pk=obraSocial.pk %}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                <td class="success"><a href="{% url 'aplicacionTurnos.views.eliminarObraSocial' pk=obraSocial.pk %}"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+            </tr>
+        {% endfor %}
+      </table>
+    {% endblock %}

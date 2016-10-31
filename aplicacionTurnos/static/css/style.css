@@ -1,0 +1,124 @@
+#contenedorPrimarioIzquierda{
+    width:25%;
+    height:100%;
+    margin: 0px 0px 0px 0px;
+    float: left;
+}
+#dia{
+    width:71%;
+    height:100%;
+    margin-left:2%;
+    margin-right:auto;
+    display:inline-block;
+    overflow:auto;
+}
+
+#calendario{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:50px;
+    width: 95%;
+    height:75%;
+}
+#medicos{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:20px;
+    width: 35%;
+    height: 8%;
+}
+#buscadorPaciente{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    width: 95%;
+    height: 8%;
+}
+#contenedorPrincipal{
+    width: 100%;
+    height: 60%;
+}
+#contenedorSecundario{
+    width:100%;
+    height: 40%;
+}
+#general{
+    width:1280px;
+    height:614px;
+}
+
+#contenedorSecundarioIzquierda{
+    float: left;
+    width:25%;
+    height:85%;
+    overflow: auto;
+}
+#contenedorSecundarioDerecha{
+    margin-left:2%;
+    margin-right:2%;
+    width:71%;
+    height:85%;
+    display:inline-block;
+}
+#contenedorTab{
+    width:31%;
+    height:15%;
+}
+#tabPrincipal{
+    height:100%;
+
+}
+#liPrincipal{
+    height:100%;
+}
+#calendarioCalendario{
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 11px;
+}
+h2 {
+    font-size:20px;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+.boton-trans
+{
+background:transparent;
+}
+.what-we-do-box {
+	margin-top: 300px;
+}
+
+.what-we-do-box h3 {
+	padding: 15px 0;
+  text-align: center;
+  color: black;
+}
+
+.what-we-do-box p {
+  font-size: 18px;
+  color: #aaa;
+  line-height: 25px;
+  text-align: center;
+}
+
+.what-we-do-box .what-we-do-box-icon {
+  width: 120px;
+	height: 120px;
+  margin: 0 auto;
+	padding-top: 30px;
+	background: #8ec1cd;
+	-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px;
+  font-size: 50px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+}
+
+.what-we-do-box .what-we-do-box-icon i, .what-we-do-box .what-we-do-box-icon span { vertical-align: middle; }
