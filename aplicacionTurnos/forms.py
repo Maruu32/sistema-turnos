@@ -7,26 +7,25 @@ from django.contrib.auth.hashers import check_password
 class pacienteForm(forms.ModelForm):
     class Meta:
         model = Paciente
-        fields = ('nombre','apellido','dni','telefono','fechaNacimiento','obraSocial','numeroObraSocial',)
-
+        fields = '__all__'
 
 class medicoForm(forms.ModelForm):
     class Meta:
         model = Medico
-        fields = ('nombre', 'apellido', 'dni', 'telefono', 'correo', 'especialidad', 'horario',)
+        fields = '__all__'
 
 
 class tratamientoForm(forms.ModelForm):
     class Meta:
         model = Tratamiento
-        fields = ('nombre', 'duracion', 'precio',)
+        fields = '__all__'
 
 
 class especialidadForm(forms.ModelForm):
     class Meta:
         model = Especialidad
         fields = ('nombre',)
-
+('estado', 'medico', 'paciente', 'horario', 'tratamiento',)
 
 class obraSocialForm(forms.ModelForm):
     class Meta:
@@ -37,7 +36,10 @@ class obraSocialForm(forms.ModelForm):
 class turnoForm(forms.ModelForm):
     class Meta:
         model = Turno
-        fields = ('estado', 'medico', 'paciente', 'horario', 'tratamiento',)
+        fields = '__all__'
+        widgets = {
+            'estado': forms.HiddenInput(),
+            }
 
 
 class LoginForm(forms.Form):

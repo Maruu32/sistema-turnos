@@ -83,7 +83,7 @@
 
 h2 {
   font: normal 20px Cookie, Arial, Helvetica, sans-serif;
-}
+}="
 
 body {
   background-color: #e6e6e6;
@@ -141,4 +141,25 @@ background:transparent;
   color: #2E64FE;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: transparent;;
+}
+
+
+.Ause{
+  background-color: #FE2E2E;
+}
+
+.Pend{
+  background-color: #BDBDBD;
+}
+
+.CM{
+  background-color: #FA58AC;
+}
+
+.CP{
+  background-color: #E2A9F3;
+}
+
+.Aten{
+  background-color: #A9F5BC;
 }
